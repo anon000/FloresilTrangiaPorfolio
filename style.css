@@ -434,6 +434,59 @@ span {
     color: var(--text-color);
 }
 
+/* Success Modal */
+
+.success-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    z-index: 9999;
+}
+
+.success-modal.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-card{
+    width: 400px;
+    max-width: 90%;
+    background: var(--snd-bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    transform: scale(.8);
+    transition: .3s ease;
+}
+
+.success-modal.show .success-card{
+    transform: scale(1);
+}
+
+.success-card i{
+    font-size: 80px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.success-card h2{
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.success-card p{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
 /* Responsive Design Code */
 
 @media (max-width:1200px) {
